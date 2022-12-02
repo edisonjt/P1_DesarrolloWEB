@@ -30,6 +30,40 @@ function GuardarCliente() {
   xhr.send(data);
   location.reload();
 }
+
+function GuardarAdmin() {
+  let nombre = document.querySelector("#nombre").value;
+  let apellido = document.querySelector("#apellido").value;
+  let fechaNac = document.querySelector("#fechaNac").value;
+  let telefono = document.querySelector("#telefono").value;
+  let email = document.querySelector("#email").value;
+  let password = document.querySelector("#password").value;
+  let res = document.querySelector("#res");
+
+  let xhr = new XMLHttpRequest();
+
+  xhr.open("POST", "../../Logic/logicaAdmin.php", true);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      res.innerHTML = this.responseText;
+    }
+  };
+
+  let data = JSON.stringify({
+    nombre: nombre,
+    apellido: apellido,
+    fechaNac: fechaNac,
+    telefono: telefono,
+    email: email,
+    password: password,
+    operacion: "GuardarAdmin",
+  });
+
+  xhr.send(data);
+  location.reload();
+}
+
 function BuscarTodosClientes() {
   let datos = document.querySelector("#datos");
 
@@ -44,6 +78,24 @@ function BuscarTodosClientes() {
   };
 
   let data = JSON.stringify({ operacion: "BuscarTodosClientes" });
+
+  xhr.send(data);
+}
+
+function BuscarTodosAdmin() {
+  let datos = document.querySelector("#datos");
+
+  let xhr = new XMLHttpRequest();
+  document.getElementById("editar").style.display = "none";
+  xhr.open("POST", "../../Logic/logicaAdmin.php", true);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      datos.innerHTML = this.responseText;
+    }
+  };
+
+  let data = JSON.stringify({ operacion: "BuscarTodosAdmin" });
 
   xhr.send(data);
 }

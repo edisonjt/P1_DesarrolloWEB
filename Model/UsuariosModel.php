@@ -10,7 +10,7 @@ class Usuario{
     private $tipo;
     private $email;
     private $tipoCliente = "cliente";
-
+    private $tipoAdmin = "admin";
     public function __construct()
     {
         
@@ -175,7 +175,7 @@ class Usuario{
         $conn = new DataBase();
         $sql = "INSERT INTO usuarios(id, nombre, apellido, email, fecha_nac, telefono, password, tipo) VALUES (null,?,?,?,?,?,?,?)";
         $stmt = $conn->ms->prepare($sql);
-        $stmt->bind_param("ssssiss", $this->nombre, $this->apellido, $this->email, $this->fecha,$this->telefono, $this->password, "admin");
+        $stmt->bind_param("ssssiss", $this->nombre, $this->apellido, $this->email, $this->fecha,$this->telefono, $this->password, $this->tipoAdmin );
         $stmt->execute();
         $id = $stmt->insert_id;
         return ($id);
