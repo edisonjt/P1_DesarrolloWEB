@@ -1,6 +1,7 @@
 /********** Template CSS **********/
 body{
-    background-image: url("../img/background.jpg");
+    /* background-image: url("../img/background.jpg"); */
+    background-image: url("../../user/images/banner.png");
     background-size: cover;
 }
 :root {

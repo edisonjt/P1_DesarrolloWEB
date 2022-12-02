@@ -49,7 +49,7 @@
             <div class="d-flex align-items-center justify-content-between mb-3">
               <a href="index.html" class="">
                 <h3 class="text-primary">
-                  <i class="fa fa-user-edit me-2"></i>Cine 23
+                  <i class="fa fa-user-edit me-2"></i>Cine23
                 </h3>
               </a>
               <h5>Iniciar Sesión</h5>
