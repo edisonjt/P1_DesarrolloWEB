@@ -53,7 +53,7 @@ https://templatemo.com/tm-579-cyborg-gaming
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.php" class="logo">
+            <a href="../../index.php" class="logo">
               <img src="../../assets/user/images/logo1.png" alt="">
             </a>
             <!-- ***** Logo End ***** -->
@@ -67,7 +67,7 @@ https://templatemo.com/tm-579-cyborg-gaming
             <!-- ***** Search End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index.php">Cartelera</a></li>
+              <li><a href="../../index.php">Cartelera</a></li>
               <li><a href="browse.php" class="active">Ranking</a></li>
 
               <li><a href="profile.php">Perfil <img src="../../assets/user/images/profile-header.jpg" alt=""></a></li>
@@ -148,8 +148,8 @@ https://templatemo.com/tm-579-cyborg-gaming
                       <li><i class="fa fa-download"></i> 2.3M</li>
                     </ul>
                   </div>
-                 
-                
+
+
                 </div>
               </div>
             </div>
@@ -163,7 +163,8 @@ https://templatemo.com/tm-579-cyborg-gaming
                   <li>
                     <img src="../../assets/user/images/snack1.jpg" alt="" class="templatemo-item">
                     <h4>Combo 1</h4>
-                    <h6>Canguil/Bebida/Dulce</h6>
+                    <h6>Canguil/Bebida</h6>
+                    <h6>/Dulce</h6>
                     <div class="download">
                       <a href="#"><i class="fa fa-cart-plus"></i></a>
                     </div>
@@ -185,7 +186,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                     </div>
                   </li>
                 </ul>
-                
+
               </div>
             </div>
           </div>
