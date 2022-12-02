@@ -49,7 +49,7 @@ https://templatemo.com/tm-579-cyborg-gaming
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.php" class="logo">
-              <img src="../../assets/user/images/logo.png" alt="" />
+              <img src="../../assets/user/images/logo1.png" alt="" />
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Search End ***** -->
@@ -62,12 +62,11 @@ https://templatemo.com/tm-579-cyborg-gaming
             <!-- ***** Search End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index.php" class="active">Home</a></li>
-              <li><a href="browse.php">Browse</a></li>
-              <li><a href="details.php">Details</a></li>
-
+              <li><a href="index.php" class="active">Cartelera</a></li>
+              <li><a href="browse.php">Ranking</a></li>
+              
               <li>
-                <a href="profile.php">Profile
+                <a href="profile.php">Perfil
                   <img src="../../assets/user/images/profile-header.jpg" alt="" /></a>
               </li>
             </ul>
@@ -91,8 +90,8 @@ https://templatemo.com/tm-579-cyborg-gaming
             <div class="row">
               <div class="col-lg-7">
                 <div class="header-text">
-                  <h6>Imagen tamaño banner de cine</h6>
-                  <h4><em>Browse</em> Our Popular Games Here</h4>
+                  <h6>BIENVENIDOS A CINE23</h6>
+                  <h4>El mejor cine del mundo</h4>
                   <div class="main-button">
                     <a href="browse.php">Iniciar Sesión</a>
                   </div>
@@ -107,7 +106,7 @@ https://templatemo.com/tm-579-cyborg-gaming
             <div class="row">
               <div class="col-lg-12">
                 <div class="heading-section">
-                  <h4><em>Listado</em> de películas</h4>
+                  <h4><em>Cartelera</em> de películas</h4>
                 </div>
                 <div class="row">
                   <div class="col-lg-3 col-sm-6">
