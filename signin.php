@@ -49,10 +49,10 @@
             <div class="d-flex align-items-center justify-content-between mb-3">
               <a href="index.html" class="">
                 <h3 class="text-primary">
-                  <i class="fa fa-user-edit me-2"></i>DarkPan
+                  <i class="fa fa-user-edit me-2"></i>Cine 23
                 </h3>
               </a>
-              <h3>Sign In</h3>
+              <h5>Iniciar Sesión</h5>
             </div>
             <div class="form-floating mb-3">
               <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
