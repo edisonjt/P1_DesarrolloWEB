@@ -1,6 +1,11 @@
 /********** Template CSS **********/
+body{
+    /* background-image: url("../img/background.jpg"); */
+    background-image: url("../../user/images/banner.png");
+    background-size: cover;
+}
 :root {
-    --primary: #EB1616;
+    --primary: #d63384;
     --secondary: #191C24;
     --light: #6C7293;
     --dark: #000000;

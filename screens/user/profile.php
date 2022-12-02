@@ -51,8 +51,8 @@ https://templatemo.com/tm-579-cyborg-gaming
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.php" class="logo">
-              <img src="../../assets/user/images/logo.png" alt="">
+            <a href="../../index.php" class="logo">
+              <img src="../../assets/user/images/logo1.png" alt="">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Search End ***** -->
@@ -65,11 +65,11 @@ https://templatemo.com/tm-579-cyborg-gaming
             <!-- ***** Search End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index.php">Home</a></li>
-              <li><a href="browse.php">Browse</a></li>
-              <li><a href="details.php">Details</a></li>
+              <li><a href="../../index.php">Cartelera</a></li>
+              <li><a href="browse.php">Ranking</a></li>
 
-              <li><a href="profile.php" class="active">Profile <img src="../../assets/user/images/profile-header.jpg" alt=""></a></li>
+
+              <li><a href="profile.php" class="active">Perfil <img src="../../assets/user/images/profile-header.jpg" alt=""></a></li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>

@@ -53,8 +53,8 @@ https://templatemo.com/tm-579-cyborg-gaming
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.php" class="logo">
-              <img src="../../assets/user/images/logo.png" alt="">
+            <a href="../../index.php" class="logo">
+              <img src="../../assets/user/images/logo1.png" alt="">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Search End ***** -->
@@ -67,11 +67,10 @@ https://templatemo.com/tm-579-cyborg-gaming
             <!-- ***** Search End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index.php">Home</a></li>
-              <li><a href="browse.php" class="active">Browse</a></li>
-              <li><a href="details.php">Details</a></li>
+              <li><a href="../../index.php">Cartelera</a></li>
+              <li><a href="browse.php" class="active">Ranking</a></li>
 
-              <li><a href="profile.php">Profile <img src="../../assets/user/images/profile-header.jpg" alt=""></a></li>
+              <li><a href="profile.php">Perfil <img src="../../assets/user/images/profile-header.jpg" alt=""></a></li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
@@ -94,130 +93,100 @@ https://templatemo.com/tm-579-cyborg-gaming
             <div class="col-lg-8">
               <div class="featured-games header-text">
                 <div class="heading-section">
-                  <h4><em>Featured</em> Games</h4>
+                  <h4><em>Ranking</em> Peliculas</h4>
                 </div>
                 <div class="owl-features owl-carousel">
                   <div class="item">
                     <div class="thumb">
-                      <img src="../../assets/user/images/featured-01.jpg" alt="">
+                      <img src="../../assets/user/images/peli1.jpg" alt="">
                       <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
+                        <h6>100.4M Visualizaciones</h6>
                       </div>
                     </div>
-                    <h4>CS-GO<br><span>249K Downloads</span></h4>
+                    <h4>Forrest Gump<br><span>98% Aprobación</span></h4>
                     <ul>
                       <li><i class="fa fa-star"></i> 4.8</li>
+                      <li><i class="fa fa-download"></i> 10.3M</li>
+                    </ul>
+                  </div>
+                  <div class="item">
+                    <div class="thumb">
+                      <img src="../../assets/user/images/peli2.jpg" alt="">
+                      <div class="hover-effect">
+                        <h6>2.4M Visualizaciones</h6>
+                      </div>
+                    </div>
+                    <h4>Zodiac<br><span>96% Aprobación</span></h4>
+                    <ul>
+                      <li><i class="fa fa-star"></i> 4.5</li>
                       <li><i class="fa fa-download"></i> 2.3M</li>
                     </ul>
                   </div>
                   <div class="item">
                     <div class="thumb">
-                      <img src="../../assets/user/images/featured-02.jpg" alt="">
+                      <img src="../../assets/user/images/peli3.jpg" alt="">
                       <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
+                        <h6>12M Visualizaciones</h6>
                       </div>
                     </div>
-                    <h4>Gamezer<br><span>249K Downloads</span></h4>
+                    <h4>Top Gun Maverick<br><span>98% Aprobación</span></h4>
                     <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
+                      <li><i class="fa fa-star"></i> 4.9</li>
+                      <li><i class="fa fa-download"></i> 10.3M</li>
                     </ul>
                   </div>
                   <div class="item">
                     <div class="thumb">
-                      <img src="../../assets/user/images/featured-03.jpg" alt="">
+                      <img src="../../assets/user/images/peli4.jpg" alt="">
                       <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
+                        <h6>8.4K Visualizaciones</h6>
                       </div>
                     </div>
-                    <h4>Island Rusty<br><span>249K Downloads</span></h4>
+                    <h4>Your Name<br><span>96% Aprobación</span></h4>
                     <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
+                      <li><i class="fa fa-star"></i> 4.4</li>
                       <li><i class="fa fa-download"></i> 2.3M</li>
                     </ul>
                   </div>
-                  <div class="item">
-                    <div class="thumb">
-                      <img src="../../assets/user/images/featured-01.jpg" alt="">
-                      <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
-                      </div>
-                    </div>
-                    <h4>CS-GO<br><span>249K Downloads</span></h4>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
-                  <div class="item">
-                    <div class="thumb">
-                      <img src="../../assets/user/images/featured-02.jpg" alt="">
-                      <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
-                      </div>
-                    </div>
-                    <h4>Gamezer<br><span>249K Downloads</span></h4>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
-                  <div class="item">
-                    <div class="thumb">
-                      <img src="../../assets/user/images/featured-03.jpg" alt="">
-                      <div class="hover-effect">
-                        <h6>2.4K Streaming</h6>
-                      </div>
-                    </div>
-                    <h4>Island Rusty<br><span>249K Downloads</span></h4>
-                    <ul>
-                      <li><i class="fa fa-star"></i> 4.8</li>
-                      <li><i class="fa fa-download"></i> 2.3M</li>
-                    </ul>
-                  </div>
+
+
                 </div>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="top-downloaded">
                 <div class="heading-section">
-                  <h4><em>Top</em> Downloaded</h4>
+                  <h4><em>SNACKS</em></h4>
+                  <h6>Acompaña tu película con un snack</h6><br>
                 </div>
                 <ul>
                   <li>
-                    <img src="../../assets/user/images/game-01.jpg" alt="" class="templatemo-item">
-                    <h4>Fortnite</h4>
-                    <h6>Sandbox</h6>
-                    <span><i class="fa fa-star" style="color: yellow;"></i> 4.9</span>
-                    <span><i class="fa fa-download" style="color: #ec6090;"></i> 2.2M</span>
+                    <img src="../../assets/user/images/snack1.jpg" alt="" class="templatemo-item">
+                    <h4>Combo 1</h4>
+                    <h6>Canguil/Bebida</h6>
+                    <h6>/Dulce</h6>
                     <div class="download">
-                      <a href="#"><i class="fa fa-download"></i></a>
+                      <a href="#"><i class="fa fa-cart-plus"></i></a>
                     </div>
                   </li>
                   <li>
-                    <img src="../../assets/user/images/game-02.jpg" alt="" class="templatemo-item">
-                    <h4>CS-GO</h4>
-                    <h6>Legendary</h6>
-                    <span><i class="fa fa-star" style="color: yellow;"></i> 4.9</span>
-                    <span><i class="fa fa-download" style="color: #ec6090;"></i> 2.2M</span>
+                    <img src="../../assets/user/images/snack2.png" alt="" class="templatemo-item">
+                    <h4>Combo 2</h4>
+                    <h6>Canguil/Bebida</h6>
                     <div class="download">
-                      <a href="#"><i class="fa fa-download"></i></a>
+                      <a href="#"><i class="fa fa-cart-plus"></i></a>
                     </div>
                   </li>
                   <li>
-                    <img src="../../assets/user/images/game-03.jpg" alt="" class="templatemo-item">
-                    <h4>PugG</h4>
-                    <h6>Battle Royale</h6>
-                    <span><i class="fa fa-star" style="color: yellow;"></i> 4.9</span>
-                    <span><i class="fa fa-download" style="color: #ec6090;"></i> 2.2M</span>
+                    <img src="../../assets/user/images/snack3.png" alt="" class="templatemo-item">
+                    <h4>Combo 3</h4>
+                    <h6>Nachos/Bebida</h6>
                     <div class="download">
-                      <a href="#"><i class="fa fa-download"></i></a>
+                      <a href="#"><i class="fa fa-cart-plus"></i></a>
                     </div>
                   </li>
                 </ul>
-                <div class="text-button">
-                  <a href="profile.php">View All Games</a>
-                </div>
+
               </div>
             </div>
           </div>
