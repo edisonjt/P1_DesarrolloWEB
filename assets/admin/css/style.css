@@ -1,4 +1,8 @@
 /********** Template CSS **********/
+body{
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+}
 :root {
     --primary: #d63384;
     --secondary: #191C24;
