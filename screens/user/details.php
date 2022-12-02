@@ -8,7 +8,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <title>Cyborg - Awesome HTML5 Template</title>
+  <title>Sistema Cine</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -52,7 +52,7 @@ https://templatemo.com/tm-579-cyborg-gaming
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.php" class="logo">
-              <img src="../../assets/user/images/logo.png" alt="">
+              <img src="../../assets/user/images/logo1.png" alt="">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Search End ***** -->
@@ -65,7 +65,7 @@ https://templatemo.com/tm-579-cyborg-gaming
             <!-- ***** Search End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index.php">Home</a></li>
+              <li><a href="index.php">Cartelera</a></li>
               <li><a href="browse.php">Browse</a></li>
               <li><a href="details.php" class="active">Details</a></li>
 
