@@ -120,7 +120,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                       </ul>
                       <div class="col-lg-12">
                         <div class="main-button">
-                          <a href="browse.php">Reservar</a>
+                          <a href="reserva.php">Reservar</a>
                         </div>
                       </div>
                     </div>
