@@ -29,9 +29,10 @@
 
   <!-- Template Stylesheet -->
   <link href="../../assets/admin/css/style.css" rel="stylesheet" />
+  <script src="../../js/scriptAdmin.js"></script>
 </head>
 
-<body>
+<body onload="BuscarTodosClientes();">
   <div class="container-fluid position-relative d-flex p-0">
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -60,11 +61,11 @@
           </div>
         </div>
         <div class="navbar-nav w-100">
-          <a href="index.php" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+          <a href="index.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
           <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Usuarios</a>
+            <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Usuarios</a>
             <div class="dropdown-menu bg-transparent border-0">
-              <a href="clientes.php" class="dropdown-item">Clientes</a>
+              <a href="#" class="dropdown-item active">Clientes</a>
               <a href="typography.php" class="dropdown-item">Administradores</a>
             </div>
           </div>  
@@ -190,152 +191,72 @@
       </nav>
       <!-- Navbar End -->
 
-      <!-- Sale & Revenue Start -->
+      <!-- Form Start -->
       <div class="container-fluid pt-4 px-4">
-        <div class="row g-4">
-          <div class="col-sm-6 col-xl-3">
-            <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-              <i class="fa fa-chart-line fa-3x text-primary"></i>
-              <div class="ms-3">
-                <p class="mb-2">Today Sale</p>
-                <h6 class="mb-0">$1234</h6>
+      <div class="col-sm-12 col-xl-12">
+            <div class="bg-secondary rounded h-100 p-4">
+              <form id="form" onsubmit="return false;">
+              <input type="number" style="display:none" id="id" />
+              <h6 class="mb-4">Formulario Clientes</h6>
+              <div class="form-floating mb-3">
+                <input type="text" id="nombre" class="form-control"  placeholder="name@example.com" />
+                <label for="floatingInput">Nombre</label>
               </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-xl-3">
-            <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-              <i class="fa fa-chart-bar fa-3x text-primary"></i>
-              <div class="ms-3">
-                <p class="mb-2">Total Sale</p>
-                <h6 class="mb-0">$1234</h6>
+              <div class="form-floating mb-3">
+                <input type="text" id="apellido" class="form-control"  placeholder="name@example.com" />
+                <label for="floatingInput">Apellido</label>
               </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-xl-3">
-            <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-              <i class="fa fa-chart-area fa-3x text-primary"></i>
-              <div class="ms-3">
-                <p class="mb-2">Today Revenue</p>
-                <h6 class="mb-0">$1234</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-xl-3">
-            <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-              <i class="fa fa-chart-pie fa-3x text-primary"></i>
-              <div class="ms-3">
-                <p class="mb-2">Total Revenue</p>
-                <h6 class="mb-0">$1234</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Sale & Revenue End -->
 
-      <!-- Sales Chart Start -->
-      <!-- <div class="container-fluid pt-4 px-4">
-        <div class="row g-4">
-          <div class="col-sm-12 col-xl-6">
-            <div class="bg-secondary text-center rounded p-4">
-              <div class="d-flex align-items-center justify-content-between mb-4">
-                <h6 class="mb-0">Worldwide Sales</h6>
-                <a href="">Show All</a>
+              <div class="form-floating mb-3">
+                <input type="date" id="fechaNac" class="form-control"  placeholder="name@example.com" />
+                <label for="floatingInput">Fecha de Nacimiento</label>
               </div>
-              <canvas id="worldwide-sales"></canvas>
+
+              <div class="form-floating mb-3">
+                <input type="tel" id="telefono" class="form-control"  placeholder="name@example.com" />
+                <label for="floatingInput">Telefono</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="email" id="email" class="form-control"  placeholder="name@example.com" />
+                <label for="floatingInput">Email</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" placeholder="Password" />
+                <label for="floatingPassword">Password</label>
+              </div>
+              <button type="submit" class="btn btn-primary" id="guardar" onclick="GuardarCliente()">Registro</button>
+              <button type="submit" class="btn btn-success" id="editar" onclick="EditarUsuario()">Editar</button>
+              </form>
             </div>
           </div>
-          <div class="col-sm-12 col-xl-6">
-            <div class="bg-secondary text-center rounded p-4">
-              <div class="d-flex align-items-center justify-content-between mb-4">
-                <h6 class="mb-0">Salse & Revenue</h6>
-                <a href="">Show All</a>
-              </div>
-              <canvas id="salse-revenue"></canvas>
-            </div>
-          </div>
+          <div id="res"></div>
         </div>
-      </div> -->
-      <!-- Sales Chart End -->
+      <!-- Form End -->
 
       <!-- Recent Sales Start -->
       <div class="container-fluid pt-4 px-4">
         <div class="bg-secondary text-center rounded p-4">
           <div class="d-flex align-items-center justify-content-between mb-4">
-            <h6 class="mb-0">Recent Salse</h6>
+            <h6 class="mb-0">Tabla Clientes</h6>
             <a href="">Show All</a>
           </div>
           <div class="table-responsive">
             <table class="table text-start align-middle table-bordered table-hover mb-0">
               <thead>
                 <tr class="text-white">
-                  <th scope="col">
-                    <input class="form-check-input" type="checkbox" />
-                  </th>
-                  <th scope="col">Date</th>
-                  <th scope="col">Invoice</th>
-                  <th scope="col">Customer</th>
-                  <th scope="col">Amount</th>
-                  <th scope="col">Status</th>
-                  <th scope="col">Action</th>
+                <th scope="col">ID</th>
+                  <th scope="col">Nombre Apellido</th>
+                  <th scope="col">Fecha Naciemiento</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Telefono</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td><input class="form-check-input" type="checkbox" /></td>
-                  <td>01 Jan 2045</td>
-                  <td>INV-0123</td>
-                  <td>Jhon Doe</td>
-                  <td>$123</td>
-                  <td>Paid</td>
-                  <td>
-                    <a class="btn btn-sm btn-primary" href="">Detail</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><input class="form-check-input" type="checkbox" /></td>
-                  <td>01 Jan 2045</td>
-                  <td>INV-0123</td>
-                  <td>Jhon Doe</td>
-                  <td>$123</td>
-                  <td>Paid</td>
-                  <td>
-                    <a class="btn btn-sm btn-primary" href="">Detail</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><input class="form-check-input" type="checkbox" /></td>
-                  <td>01 Jan 2045</td>
-                  <td>INV-0123</td>
-                  <td>Jhon Doe</td>
-                  <td>$123</td>
-                  <td>Paid</td>
-                  <td>
-                    <a class="btn btn-sm btn-primary" href="">Detail</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><input class="form-check-input" type="checkbox" /></td>
-                  <td>01 Jan 2045</td>
-                  <td>INV-0123</td>
-                  <td>Jhon Doe</td>
-                  <td>$123</td>
-                  <td>Paid</td>
-                  <td>
-                    <a class="btn btn-sm btn-primary" href="">Detail</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td><input class="form-check-input" type="checkbox" /></td>
-                  <td>01 Jan 2045</td>
-                  <td>INV-0123</td>
-                  <td>Jhon Doe</td>
-                  <td>$123</td>
-                  <td>Paid</td>
-                  <td>
-                    <a class="btn btn-sm btn-primary" href="">Detail</a>
-                  </td>
-                </tr>
+              <tbody id="datos">
+
               </tbody>
             </table>
           </div>
@@ -343,138 +264,7 @@
       </div>
       <!-- Recent Sales End -->
 
-      <!-- Widgets Start -->
-      <div class="container-fluid pt-4 px-4">
-        <div class="row g-4">
-          <div class="col-sm-12 col-md-6 col-xl-4">
-            <div class="h-100 bg-secondary rounded p-4">
-              <div class="d-flex align-items-center justify-content-between mb-2">
-                <h6 class="mb-0">Messages</h6>
-                <a href="">Show All</a>
-              </div>
-              <div class="d-flex align-items-center border-bottom py-3">
-                <img class="rounded-circle flex-shrink-0" src="../../assets/admin/img/user.jpg" alt="" style="width: 40px; height: 40px" />
-                <div class="w-100 ms-3">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h6 class="mb-0">Jhon Doe</h6>
-                    <small>15 minutes ago</small>
-                  </div>
-                  <span>Short message goes here...</span>
-                </div>
-              </div>
-              <div class="d-flex align-items-center border-bottom py-3">
-                <img class="rounded-circle flex-shrink-0" src="../../assets/admin/img/user.jpg" alt="" style="width: 40px; height: 40px" />
-                <div class="w-100 ms-3">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h6 class="mb-0">Jhon Doe</h6>
-                    <small>15 minutes ago</small>
-                  </div>
-                  <span>Short message goes here...</span>
-                </div>
-              </div>
-              <div class="d-flex align-items-center border-bottom py-3">
-                <img class="rounded-circle flex-shrink-0" src="../../assets/admin/img/user.jpg" alt="" style="width: 40px; height: 40px" />
-                <div class="w-100 ms-3">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h6 class="mb-0">Jhon Doe</h6>
-                    <small>15 minutes ago</small>
-                  </div>
-                  <span>Short message goes here...</span>
-                </div>
-              </div>
-              <div class="d-flex align-items-center pt-3">
-                <img class="rounded-circle flex-shrink-0" src="../../assets/admin/img/user.jpg" alt="" style="width: 40px; height: 40px" />
-                <div class="w-100 ms-3">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h6 class="mb-0">Jhon Doe</h6>
-                    <small>15 minutes ago</small>
-                  </div>
-                  <span>Short message goes here...</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-xl-4">
-            <div class="h-100 bg-secondary rounded p-4">
-              <div class="d-flex align-items-center justify-content-between mb-4">
-                <h6 class="mb-0">Calender</h6>
-                <a href="">Show All</a>
-              </div>
-              <div id="calender"></div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-xl-4">
-            <div class="h-100 bg-secondary rounded p-4">
-              <div class="d-flex align-items-center justify-content-between mb-4">
-                <h6 class="mb-0">To Do List</h6>
-                <a href="">Show All</a>
-              </div>
-              <div class="d-flex mb-2">
-                <input class="form-control bg-dark border-0" type="text" placeholder="Enter task" />
-                <button type="button" class="btn btn-primary ms-2">
-                  Add
-                </button>
-              </div>
-              <div class="d-flex align-items-center border-bottom py-2">
-                <input class="form-check-input m-0" type="checkbox" />
-                <div class="w-100 ms-3">
-                  <div class="d-flex w-100 align-items-center justify-content-between">
-                    <span>Short task goes here...</span>
-                    <button class="btn btn-sm">
-                      <i class="fa fa-times"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex align-items-center border-bottom py-2">
-                <input class="form-check-input m-0" type="checkbox" />
-                <div class="w-100 ms-3">
-                  <div class="d-flex w-100 align-items-center justify-content-between">
-                    <span>Short task goes here...</span>
-                    <button class="btn btn-sm">
-                      <i class="fa fa-times"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex align-items-center border-bottom py-2">
-                <input class="form-check-input m-0" type="checkbox" checked />
-                <div class="w-100 ms-3">
-                  <div class="d-flex w-100 align-items-center justify-content-between">
-                    <span><del>Short task goes here...</del></span>
-                    <button class="btn btn-sm text-primary">
-                      <i class="fa fa-times"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex align-items-center border-bottom py-2">
-                <input class="form-check-input m-0" type="checkbox" />
-                <div class="w-100 ms-3">
-                  <div class="d-flex w-100 align-items-center justify-content-between">
-                    <span>Short task goes here...</span>
-                    <button class="btn btn-sm">
-                      <i class="fa fa-times"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex align-items-center pt-2">
-                <input class="form-check-input m-0" type="checkbox" />
-                <div class="w-100 ms-3">
-                  <div class="d-flex w-100 align-items-center justify-content-between">
-                    <span>Short task goes here...</span>
-                    <button class="btn btn-sm">
-                      <i class="fa fa-times"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Widgets End -->
+     
 
       <!-- Footer Start -->
       <div class="container-fluid pt-4 px-4">
