@@ -76,8 +76,9 @@ if (!isset($_SESSION["email"])) {
               <a href="clientes.php" class="dropdown-item">Clientes</a>
               <a href="admin.php" class="dropdown-item">Administradores</a>
             </div>
-          </div>
-          <a href="widget.php" class="nav-item nav-link"><i class="bi bi-tv me-2"></i>Peliculas</a>
+          </div>  
+          <a href="pelicula.php" class="nav-item nav-link"><i class="bi bi-tv me-2"></i>Peliculas</a>
+
           <a href="widget.php" class="nav-item nav-link"><i class="bi bi-receipt me-2"></i>Ventas</a>
 
           <!-- Eliminar esto -->
