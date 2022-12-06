@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,10 +65,19 @@ https://templatemo.com/tm-579-cyborg-gaming
             <ul class="nav">
               <li><a href="index.php" class="active">Cartelera</a></li>
               <li><a href="screens/user/browse.php">Ranking</a></li>
-
-              <li>
-                <a href="screens/user/profile.php">Perfil
-                  <img src="assets/user/images/profile-header.jpg" alt="" /></a>
+              <?php
+              if (!isset($_SESSION["email"])) {
+                echo "<li><a href='signin.php'>Iniciar Sesión
+                  <img src='assets/user/images/profile-header.jpg' alt='' />
+                  </a>";
+              } elseif (isset($_SESSION["email"])) {
+                echo "
+                  <li><a href='Config/Logout.php'>Cerrar Sesión</a></li>
+                  <li><a href='screens/user/profile.php'>$_SESSION[nombre]
+                  <img src='assets/user/images/profile-header.jpg' alt='' />
+                  </a>";
+              }
+              ?>
               </li>
             </ul>
             <a class="menu-trigger">
@@ -112,96 +122,23 @@ https://templatemo.com/tm-579-cyborg-gaming
                   <div class="col-lg-3 col-sm-6">
                     <div class="item">
                       <img src="assets/user/images/popular-01.jpg" alt="" />
-                      <h4>Fortnite<br /><span>Sandbox</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
+                      <h4>Los Avanagers<br /></h4>
+                      <span><b>Duración: </b>ESP</span>
+                      <span><b>Clasificación: </b>Todo publico</span>
+                      <span><b>Género: </b>Accion</span>
                       <div class="col-lg-12">
                         <div class="main-button">
-                          <a href="screens/user/reserva.php">Reservar</a>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <img src="assets/user/images/popular-02.jpg" alt="" />
-                      <h4>PubG<br /><span>Battle S</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <img src="assets/user/images/popular-03.jpg" alt="" />
-                      <h4>Dota2<br /><span>Steam-X</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <img src="assets/user/images/popular-04.jpg" alt="" />
-                      <h4>CS-GO<br /><span>Legendary</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="item">
-                      <div class="row">
-                        <div class="col-lg-6 col-sm-6">
-                          <div class="item inner-item">
-                            <img src="assets/user/images/popular-05.jpg" alt="" />
-                            <h4>Mini Craft<br /><span>Legendary</span></h4>
-                            <ul>
-                              <li><i class="fa fa-star"></i> 4.8</li>
-                              <li><i class="fa fa-download"></i> 2.3M</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6">
-                          <div class="item">
-                            <img src="assets/user/images/popular-06.jpg" alt="" />
-                            <h4>Eagles Fly<br /><span>Matrix Games</span></h4>
-                            <ul>
-                              <li><i class="fa fa-star"></i> 4.8</li>
-                              <li><i class="fa fa-download"></i> 2.3M</li>
-                            </ul>
-                          </div>
+                          <?php
+                          if (!isset($_SESSION["email"])) {
+                            echo "<a href='signin.php'>Reservar</a>";
+                          } elseif (isset($_SESSION["email"])) {
+                            echo "<a href='screens/user/reserva.php'>Reservar</a>";
+                          }
+                          ?>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <img src="assets/user/images/popular-07.jpg" alt="" />
-                      <h4>Warface<br /><span>Max 3D</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <img src="assets/user/images/popular-08.jpg" alt="" />
-                      <h4>Warcraft<br /><span>Legend</span></h4>
-                      <ul>
-                        <li><i class="fa fa-star"></i> 4.8</li>
-                        <li><i class="fa fa-download"></i> 2.3M</li>
-                      </ul>
-                    </div>
-                  </div>
-
                 </div>
               </div>
             </div>
