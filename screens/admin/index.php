@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION["email"])) {
+  header('Location: ../../signin.php');
+  return false;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,11 +76,11 @@
               <a href="clientes.php" class="dropdown-item">Clientes</a>
               <a href="admin.php" class="dropdown-item">Administradores</a>
             </div>
-          </div>  
+          </div>
           <a href="widget.php" class="nav-item nav-link"><i class="bi bi-tv me-2"></i>Peliculas</a>
           <a href="widget.php" class="nav-item nav-link"><i class="bi bi-receipt me-2"></i>Ventas</a>
 
-        <!-- Eliminar esto -->
+          <!-- Eliminar esto -->
           <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
             <div class="dropdown-menu bg-transparent border-0">
@@ -183,7 +192,7 @@
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
               <a href="#" class="dropdown-item">My Profile</a>
               <a href="#" class="dropdown-item">Settings</a>
-              <a href="#" class="dropdown-item">Log Out</a>
+              <a href="../../Config/Logout.php" class="dropdown-item">Log Out</a>
             </div>
           </div>
         </div>
