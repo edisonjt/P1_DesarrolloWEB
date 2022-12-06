@@ -33,13 +33,13 @@
 
 <body>
   <div class="container-fluid position-relative d-flex p-0">
-    <!-- Spinner Start -->
+    <!-- Spinner Start 
     <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
       <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
         <span class="sr-only">Loading...</span>
       </div>
     </div>
-    <!-- Spinner End -->
+   Spinner End -->
 
     <!-- Sign In Start -->
     <div class="container-fluid">
@@ -54,12 +54,17 @@
               </a>
               <h5>Iniciar Sesión</h5>
             </div>
+            <form method="POST">
+              <?php
+                  include("sesion.php");
+                  include("Config/Database.php");
+              ?>
             <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+              <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" />
               <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating mb-4">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+              <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
               <label for="floatingPassword">Password</label>
             </div>
             <div class="d-flex align-items-center justify-content-between mb-4">
@@ -69,12 +74,13 @@
               </div>
               <a href="">Forgot Password</a>
             </div>
-            <button type="submit" class="btn btn-primary py-3 w-100 mb-4">
-              Sign In
-            </button>
+            <input type="submit" class="btn btn-primary py-3 w-100 mb-4" name="btningresar" value="Sign In">
+              
+            
             <p class="text-center mb-0">
               Don't have an Account? <a href="screens/admin/index.php">Sign Up</a>
             </p>
+            </form>
           </div>
         </div>
       </div>
