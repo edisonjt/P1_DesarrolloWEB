@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["email"])) {
+  header('Location: ../../signin.php');
+  return false;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +75,7 @@
               <a href="button.php" class="dropdown-item">Clientes</a>
               <a href="typography.php" class="dropdown-item">Administradores</a>
             </div>
-          </div>  
+          </div>
           <a href="widget.php" class="nav-item nav-link"><i class="bi bi-tv me-2"></i>Peliculas</a>
           <a href="widget.php" class="nav-item nav-link"><i class="bi bi-receipt me-2"></i>Ventas</a>
       </nav>

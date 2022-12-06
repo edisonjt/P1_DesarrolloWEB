@@ -1,4 +1,4 @@
-aa
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,8 +69,20 @@ https://templatemo.com/tm-579-cyborg-gaming
             <ul class="nav">
               <li><a href="../../index.php">Cartelera</a></li>
               <li><a href="browse.php" class="active">Ranking</a></li>
-
-              <li><a href="profile.php">Perfil <img src="../../assets/user/images/profile-header.jpg" alt=""></a></li>
+              <?php
+              if (!isset($_SESSION["email"])) {
+                echo "<li><a href='../../signin.php'>Iniciar Sesión
+                  <img src='../../assets/user/images/profile-header.jpg' alt='' />
+                  </a>";
+              } elseif (isset($_SESSION["email"])) {
+                echo "
+                  <li><a href='../../Config/Logout.php'>Cerrar Sesión</a></li>
+                  <li><a href='profile.php'>$_SESSION[nombre]
+                  <img src='../../assets/user/images/profile-header.jpg' alt='' />
+                  </a>";
+              }
+              ?>
+              </li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
