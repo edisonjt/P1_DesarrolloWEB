@@ -1,5 +1,4 @@
 <?php
-include ("../Config/Database.php");
 class Usuario{
     private $id;
     private $nombre;
