@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["email"])) {
+  header('Location: ../../signin.php');
+  return false;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,11 +76,11 @@
               <a href="#" class="dropdown-item active">Clientes</a>
               <a href="admin.php" class="dropdown-item">Administradores</a>
             </div>
-          </div>  
+          </div>
           <a href="widget.php" class="nav-item nav-link"><i class="bi bi-tv me-2"></i>Peliculas</a>
           <a href="widget.php" class="nav-item nav-link"><i class="bi bi-receipt me-2"></i>Ventas</a>
 
-        <!-- Eliminar esto -->
+          <!-- Eliminar esto -->
           <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
             <div class="dropdown-menu bg-transparent border-0">
@@ -193,32 +201,32 @@
 
       <!-- Form Start -->
       <div class="container-fluid pt-4 px-4">
-      <div class="col-sm-12 col-xl-12">
-            <div class="bg-secondary rounded h-100 p-4">
-              <form id="form" onsubmit="return false;">
+        <div class="col-sm-12 col-xl-12">
+          <div class="bg-secondary rounded h-100 p-4">
+            <form id="form" onsubmit="return false;">
               <input type="number" style="display:none" id="id" />
               <h6 class="mb-4">Formulario Clientes</h6>
               <div class="form-floating mb-3">
-                <input type="text" id="nombre" class="form-control"  placeholder="name@example.com" />
+                <input type="text" id="nombre" class="form-control" placeholder="name@example.com" />
                 <label for="floatingInput">Nombre</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" id="apellido" class="form-control"  placeholder="name@example.com" />
+                <input type="text" id="apellido" class="form-control" placeholder="name@example.com" />
                 <label for="floatingInput">Apellido</label>
               </div>
 
               <div class="form-floating mb-3">
-                <input type="date" id="fechaNac" class="form-control"  placeholder="name@example.com" />
+                <input type="date" id="fechaNac" class="form-control" placeholder="name@example.com" />
                 <label for="floatingInput">Fecha de Nacimiento</label>
               </div>
 
               <div class="form-floating mb-3">
-                <input type="tel" id="telefono" class="form-control"  placeholder="name@example.com" />
+                <input type="tel" id="telefono" class="form-control" placeholder="name@example.com" />
                 <label for="floatingInput">Telefono</label>
               </div>
 
               <div class="form-floating mb-3">
-                <input type="email" id="email" class="form-control"  placeholder="name@example.com" />
+                <input type="email" id="email" class="form-control" placeholder="name@example.com" />
                 <label for="floatingInput">Email</label>
               </div>
 
@@ -228,11 +236,11 @@
               </div>
               <button type="submit" class="btn btn-primary" id="guardar" onclick="GuardarCliente()">Registro</button>
               <button type="submit" class="btn btn-success" id="editar" onclick="EditarUsuario()">Editar</button>
-              </form>
-            </div>
+            </form>
           </div>
-          <div id="res"></div>
         </div>
+        <div id="res"></div>
+      </div>
       <!-- Form End -->
 
       <!-- Recent Sales Start -->
@@ -246,7 +254,7 @@
             <table class="table text-start align-middle table-bordered table-hover mb-0">
               <thead>
                 <tr class="text-white">
-                <th scope="col">ID</th>
+                  <th scope="col">ID</th>
                   <th scope="col">Nombre Apellido</th>
                   <th scope="col">Fecha Naciemiento</th>
                   <th scope="col">Email</th>
@@ -264,7 +272,7 @@
       </div>
       <!-- Recent Sales End -->
 
-     
+
 
       <!-- Footer Start -->
       <div class="container-fluid pt-4 px-4">
