@@ -4,7 +4,7 @@ if (!isset($_SESSION["email"])) {
     header('Location: ../../signin.php');
     return false;
 } 
-
+$id=$_SESSION["id"] ;
 $idPelicula=$_GET["idPelicula"];
 $titulo=$_GET["titulo"]
 ?>
@@ -53,6 +53,7 @@ $titulo=$_GET["titulo"]
                     </div>
                     <form action='' method='POST'>
                         <input type="number" style="display:none" id="idPelicula" value="<?php echo $idPelicula ?>" />
+                        <input type="number" style="display:none" id="idUsuario" value="<?php echo $id ?>" />
                         <div class='form-floating mb-3'>
                             <input type='text' class='form-control' id='titulo' value="<?php echo $titulo ?>" placeholder='#' disabled/>
                             <label for='titulo'>Título Película</label>
