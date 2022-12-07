@@ -76,15 +76,15 @@ if (!isset($_SESSION["email"])) {
               <a href="clientes.php" class="dropdown-item" style="margin: bottom 10px;">Clientes</a>
               <a href="admin.php" class="dropdown-item">Administradores</a>
             </div>
-          </div>  
+          </div>
           <a href="pelicula.php" class="nav-item nav-link"><i class="bi bi-tv me-2"></i>Peliculas</a>
 
           <a href="venta.php" class="nav-item nav-link"><i class="bi bi-receipt me-2"></i>Ventas</a>
 
-        
-          
-         
-         
+
+
+
+
         </div>
       </nav>
     </div>
@@ -173,8 +173,7 @@ if (!isset($_SESSION["email"])) {
               <span class="d-none d-lg-inline-flex">El Admin</span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-              <a href="#" class="dropdown-item">My Profile</a>
-              <a href="#" class="dropdown-item">Settings</a>
+
               <a href="../../Config/Logout.php" class="dropdown-item">Log Out</a>
             </div>
           </div>
