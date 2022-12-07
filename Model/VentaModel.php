@@ -121,4 +121,14 @@ public function BuscarTodos(){
     return $result->fetch_all();
 }
 
+public function CantidadReservasUsuario(){
+    $conn = new DataBase();
+    $sql = "select * from venta where id_cliente= ?; ";
+    $stmt = $conn->ms->prepare($sql);
+    $stmt->bind_param("i", $this->id_cliente);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_all();
+}
+
 }

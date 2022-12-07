@@ -64,15 +64,15 @@ $titulo=$_GET["titulo"]
                             <label for='titulo'>Título Película</label>
                         </div>
                         <div class='form-floating mb-4'>
-                            <input type='date' class='form-control' id='fecha' placeholder='#' />
+                            <input type='date' class='form-control' id='fecha' placeholder='#' value="<?php echo date("Y-m-d");?>"/>
                             <label for='fecha'>Fecha de reserva</label>
                         </div>
                         <div class='form-floating mb-4'>
-                            <input type='number' class='form-control' id='cantidad' placeholder='#' />
+                            <input type='number' class='form-control' id='cantidad' placeholder='#' onchange="CambiarTotal()" />
                             <label for='cantidad'>Cantidad de boletos</label>
                         </div>
                         <div class='form-floating mb-4'>
-                            <input type='number' class='form-control' id='total' placeholder='#' />
+                            <input type='number' class='form-control' id='total' placeholder='#' disabled/>
                             <label for='total'>Total</label>
                         </div>
                         <div id="res">

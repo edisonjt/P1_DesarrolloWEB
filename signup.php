@@ -29,7 +29,7 @@
 
   <!-- Template Stylesheet -->
   <link href="assets/admin/css/style.css" rel="stylesheet" />
-  <script src="js/scriptAdmin.js"></script>
+  <script src="./js/scriptAdmin.js"></script>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
               </a>
               <h3>Sign Up</h3>
             </div>
-            <form action="" method="POST">
+            <form onsubmit="return false;">
               <div class="form-floating mb-3">
                 <input type="text" id="nombre" class="form-control" placeholder="name@example.com" />
                 <label for="floatingInput">Nombre</label>
@@ -84,8 +84,7 @@
                 <input type="password" class="form-control" id="password" placeholder="Password" />
                 <label for="floatingPassword">Password</label>
               </div>
-
-              <button type="submit" class="btn btn-primary py-3 w-100 mb-4" onclick="GuardarCliente()">
+              <button type="submit" class="btn btn-primary py-3 w-100 mb-4" onclick="GuardarClienteIndex()">
                 Registrar
               </button>
             </form>
