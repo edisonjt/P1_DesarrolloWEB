@@ -3,7 +3,11 @@ session_start();
 if (!isset($_SESSION["email"])) {
     header('Location: ../../signin.php');
     return false;
-} ?>
+} 
+
+$idPelicula=$_GET["idPelicula"];
+$titulo=$_GET["titulo"]
+?>
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -48,8 +52,9 @@ if (!isset($_SESSION["email"])) {
                         <h4>Reserva</h4>
                     </div>
                     <form action='' method='POST'>
+                        <input type="number" style="display:none" id="idPelicula" value="<?php echo $idPelicula ?>" />
                         <div class='form-floating mb-3'>
-                            <input type='text' class='form-control' id='titulo' placeholder='#' />
+                            <input type='text' class='form-control' id='titulo' value="<?php echo $titulo ?>" placeholder='#' disabled/>
                             <label for='titulo'>Título Película</label>
                         </div>
                         <div class='form-floating mb-4'>

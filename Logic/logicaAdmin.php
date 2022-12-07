@@ -150,8 +150,6 @@
                 $Pelicula->setTipo($data->tipo);
                 $Pelicula->setImagen($data->imagen);
                 echo $Pelicula->ActualizarPelicula();
-            
-            
             break;
     }
     

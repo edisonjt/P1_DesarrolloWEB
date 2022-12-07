@@ -28,10 +28,10 @@ TemplateMo 579 Cyborg Gaming
 https://templatemo.com/tm-579-cyborg-gaming
 
 -->
-
+  <script src="../../js/scriptCartelera.js"></script>
 </head>
 
-<body>
+<body onload="BuscarTodosRanking()">
 
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
@@ -107,8 +107,8 @@ https://templatemo.com/tm-579-cyborg-gaming
                 <div class="heading-section">
                   <h4><em>Ranking</em> Peliculas</h4>
                 </div>
-                <div class="owl-features owl-carousel">
-                  <div class="item">
+                <div class="owl-features owl-carousel" id="datos">
+                  <!-- <div class="item">
                     <div class="thumb">
                       <img src="../../assets/user/images/peli1.jpg" alt="">
                       <div class="hover-effect">
@@ -159,7 +159,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                       <li><i class="fa fa-star"></i> 4.4</li>
                       <li><i class="fa fa-download"></i> 2.3M</li>
                     </ul>
-                  </div>
+                  </div> -->
 
 
                 </div>

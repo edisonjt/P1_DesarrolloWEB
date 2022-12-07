@@ -1,4 +1,13 @@
-<?php session_start(); ?>
+<?php session_start();
+
+include ("../../Config/Database.php");
+require_once("../../Model/UsuariosModel.php");
+$id=$_SESSION["id"] ;
+$usuario = new Usuario();
+$usuario->setId($id);
+$result= $usuario->BuscarUsuario();
+$result= json_decode($result, true)
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -112,11 +121,10 @@ https://templatemo.com/tm-579-cyborg-gaming
                   <div class="col-lg-4 align-self-center">
                     <div class="main-info header-text">
                       <span>Miembro</span>
-                      <h4>Nombre Usuario</h4>
-                      <p><b>Edad:</b> 25 años</p>
-                      <p><b>Correo electronico:</b> mail@mail.com</p>
-                      <p><b>Direccion:</b> Ciudad</p>
-                      <p><b>Teléfono:</b> 0987654321</p>
+                      <h4><?php echo $result[0]["nombre"]. " ".$result[0]["apellido"] ; ?></h4>
+                      <p><b>Fecha de nacimiento: </b><?php echo $result[0]["fecha_nac"]; ?></p>
+                      <p><b>E-mail: </b><?php echo $result[0]["email"]; ?></p>
+                      <p><b>Teléfono: </b> <?php echo $result[0]["telefono"]; ?></p>
                       <!-- <div class="main-border-button">
                         <a href="#">Start Live Stream</a>
                       </div> -->

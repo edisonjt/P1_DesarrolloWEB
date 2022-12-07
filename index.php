@@ -26,9 +26,11 @@ TemplateMo 579 Cyborg Gaming
 https://templatemo.com/tm-579-cyborg-gaming
 
 -->
+
+  <script src="./js/scriptCartelera.js"></script>
 </head>
 
-<body>
+<body onload="BuscarTodosCartelera();">
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
@@ -118,27 +120,9 @@ https://templatemo.com/tm-579-cyborg-gaming
                 <div class="heading-section">
                   <h4><em>Cartelera</em> de películas</h4>
                 </div>
-                <div class="row">
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="item">
-                      <img src="assets/user/images/popular-01.jpg" alt="" />
-                      <h4>Los Avanagers<br /></h4>
-                      <span><b>Duración: </b>ESP</span>
-                      <span><b>Clasificación: </b>Todo publico</span>
-                      <span><b>Género: </b>Accion</span>
-                      <div class="col-lg-12">
-                        <div class="main-button">
-                          <?php
-                          if (!isset($_SESSION["email"])) {
-                            echo "<a href='signin.php'>Reservar</a>";
-                          } elseif (isset($_SESSION["email"])) {
-                            echo "<a href='screens/user/reserva.php'>Reservar</a>";
-                          }
-                          ?>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="row" id="datos">
+                 
+                  
                 </div>
               </div>
             </div>
