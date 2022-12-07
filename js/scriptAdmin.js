@@ -374,5 +374,6 @@ function GuardarClienteIndex() {
   });
 
   xhr.send(data);
+  window.alert("Usuario creado correctamente");
   window.location.href = "index.php";
 }

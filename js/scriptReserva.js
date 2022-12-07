@@ -30,6 +30,7 @@ function GuardarReserva() {
   });
 
   xhr.send(data);
+  window.alert("Reserva generada correctamente");
   window.location.href = "../../index.php";
 }
 
