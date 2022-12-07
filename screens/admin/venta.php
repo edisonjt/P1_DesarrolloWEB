@@ -71,19 +71,20 @@ if (!isset($_SESSION["email"])) {
           </div>
         </div>
         <div class="navbar-nav w-100">
-          <a href="index.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+          <a href="index.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
           <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Usuarios</a>
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Usuarios</a>
             <div class="dropdown-menu bg-transparent border-0">
-              <a href="clientes.php" class="dropdown-item active" style="margin: bottom 10px;">Clientes</a>
+              <a href="clientes.php" class="dropdown-item" style="margin: bottom 10px;">Clientes</a>
               <a href="admin.php" class="dropdown-item">Administradores</a>
             </div>
           </div>
           <a href="pelicula.php" class="nav-item nav-link"><i class="bi bi-tv me-2"></i>Peliculas</a>
-          <a href="venta.php" class="nav-item nav-link"><i class="bi bi-receipt me-2"></i>Ventas</a>
+
+          <a href="venta.php" class="nav-item nav-link active"><i class="bi bi-receipt me-2"></i>Ventas</a>
 
         </div>
-    
+
       </nav>
     </div>
     <!-- Sidebar End -->
@@ -171,9 +172,7 @@ if (!isset($_SESSION["email"])) {
               <span class="d-none d-lg-inline-flex">El Admin</span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-              <a href="#" class="dropdown-item">My Profile</a>
-              <a href="#" class="dropdown-item">Settings</a>
-              <a href="#" class="dropdown-item">Log Out</a>
+              <a href="../../Config/Logout.php" class="dropdown-item">Log Out</a>
             </div>
           </div>
         </div>
@@ -191,13 +190,13 @@ if (!isset($_SESSION["email"])) {
             <table class="table text-start align-middle table-bordered table-hover mb-0">
               <thead>
                 <tr class="text-white">
-                <th scope="col">ID</th>
+                  <th scope="col">ID</th>
                   <th scope="col">Id_Cliente</th>
                   <th scope="col">Id Pelicula</th>
                   <th scope="col">Fecha</th>
                   <th scope="col">Cantidad Boletos</th>
                   <th scope="col">Total</th>
-                  
+
                 </tr>
               </thead>
               <tbody id="datos">

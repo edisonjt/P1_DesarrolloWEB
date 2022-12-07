@@ -71,13 +71,14 @@ if (!isset($_SESSION["email"])) {
         <div class="navbar-nav w-100">
           <a href="index.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
           <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Usuarios</a>
+            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Usuarios</a>
             <div class="dropdown-menu bg-transparent border-0">
-              <a href="#" class="dropdown-item active" style="margin: bottom 10px;">Clientes</a>
+              <a href="clientes.php" class="dropdown-item" style="margin: bottom 10px;">Clientes</a>
               <a href="admin.php" class="dropdown-item">Administradores</a>
             </div>
           </div>
           <a href="pelicula.php" class="nav-item nav-link"><i class="bi bi-tv me-2"></i>Peliculas</a>
+
           <a href="venta.php" class="nav-item nav-link"><i class="bi bi-receipt me-2"></i>Ventas</a>
 
         </div>
@@ -168,9 +169,7 @@ if (!isset($_SESSION["email"])) {
               <span class="d-none d-lg-inline-flex">El Admin</span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-              <a href="#" class="dropdown-item">My Profile</a>
-              <a href="#" class="dropdown-item">Settings</a>
-              <a href="#" class="dropdown-item">Log Out</a>
+              <a href="../../Config/Logout.php" class="dropdown-item">Log Out</a>
             </div>
           </div>
         </div>

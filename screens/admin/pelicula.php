@@ -61,15 +61,16 @@
           </div>
         </div>
         <div class="navbar-nav w-100">
-          <a href="index.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+          <a href="index.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
           <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Usuarios</a>
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Usuarios</a>
             <div class="dropdown-menu bg-transparent border-0">
-              <a href="clientes.php" class="dropdown-item " style="margin: bottom 10px;">Clientes</a>
+              <a href="clientes.php" class="dropdown-item" style="margin: bottom 10px;">Clientes</a>
               <a href="admin.php" class="dropdown-item">Administradores</a>
             </div>
-          </div>  
-          <a href="pelicula.php" class="nav-item nav-link"><i class="bi bi-tv me-2"></i>Peliculas</a>
+          </div>
+          <a href="pelicula.php" class="nav-item nav-link active"><i class="bi bi-tv me-2"></i>Peliculas</a>
+
           <a href="venta.php" class="nav-item nav-link"><i class="bi bi-receipt me-2"></i>Ventas</a>
 
         </div>
@@ -160,9 +161,7 @@
               <span class="d-none d-lg-inline-flex">El Admin</span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-              <a href="#" class="dropdown-item">My Profile</a>
-              <a href="#" class="dropdown-item">Settings</a>
-              <a href="#" class="dropdown-item">Log Out</a>
+              <a href="../../Config/Logout.php" class="dropdown-item">Log Out</a>
             </div>
           </div>
         </div>
@@ -171,32 +170,32 @@
 
       <!-- Form Start -->
       <div class="container-fluid pt-4 px-4">
-      <div class="col-sm-12 col-xl-12">
-            <div class="bg-secondary rounded h-100 p-4">
-              <form id="form" onsubmit="return false;">
+        <div class="col-sm-12 col-xl-12">
+          <div class="bg-secondary rounded h-100 p-4">
+            <form id="form" onsubmit="return false;">
               <input type="number" style="display:none" id="id" />
               <h6 class="mb-4">Formulario Pelicula</h6>
               <div class="form-floating mb-3">
-                <input type="text" id="nombre" class="form-control"  placeholder="name@example.com" />
+                <input type="text" id="nombre" class="form-control" placeholder="name@example.com" />
                 <label for="floatingInput">Titulo</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="text" id="genero" class="form-control"  placeholder="name@example.com" />
+                <input type="text" id="genero" class="form-control" placeholder="name@example.com" />
                 <label for="floatingInput">Genero</label>
               </div>
 
               <div class="form-floating mb-3">
-                <input type="date" id="estreno" class="form-control"  placeholder="name@example.com" />
+                <input type="date" id="estreno" class="form-control" placeholder="name@example.com" />
                 <label for="floatingInput">Estreno</label>
               </div>
 
               <div class="form-floating mb-3">
-                <input type="time" id="duracion" class="form-control"  placeholder="name@example.com" />
+                <input type="time" id="duracion" class="form-control" placeholder="name@example.com" />
                 <label for="floatingInput">Duracion</label>
               </div>
 
               <div class="form-floating mb-3">
-                <input type="text" id="clasificacion" class="form-control"  placeholder="name@example.com" />
+                <input type="text" id="clasificacion" class="form-control" placeholder="name@example.com" />
                 <label for="floatingInput">Clasificacion</label>
               </div>
 
@@ -215,17 +214,17 @@
               </div>
 
               <div class="form-floating mb-3">
-                <input type="text"  class="form-control" id="imagen"  />
+                <input type="text" class="form-control" id="imagen" />
                 <label for="floatingPassword">Imagen</label>
               </div>
 
               <button type="submit" class="btn btn-primary" id="guardar" onclick="GuardarPelicula()">Registro</button>
               <button type="submit" class="btn btn-success" id="editar" onclick="EditarPelicula()">Editar</button>
-              </form>
-            </div>
+            </form>
           </div>
-          <div id="res"></div>
         </div>
+        <div id="res"></div>
+      </div>
       <!-- Form End -->
 
       <!-- Recent Sales Start -->
@@ -239,7 +238,7 @@
             <table class="table text-start align-middle table-bordered table-hover mb-0">
               <thead>
                 <tr class="text-white">
-                <th scope="col">ID</th>
+                  <th scope="col">ID</th>
                   <th scope="col">Titulo</th>
                   <th scope="col">Genero</th>
                   <th scope="col">Estreno</th>
@@ -259,7 +258,7 @@
       </div>
       <!-- Recent Sales End -->
 
-     
+
 
       <!-- Footer Start -->
       <div class="container-fluid pt-4 px-4">
