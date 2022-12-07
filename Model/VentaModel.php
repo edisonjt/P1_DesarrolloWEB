@@ -1,6 +1,6 @@
 <?php
-include("../Config/Database.php");
-class Pelicula
+//include("../Config/Database.php");
+class Reserva
 {
     private $id;
     private $id_cliente;
@@ -111,4 +111,14 @@ class Pelicula
         $stmt->bind_param("i", $this->id);
         $stmt->execute();
 }
+
+public function BuscarTodos(){
+    $conn = new DataBase();
+    $sql = "select * from venta; ";
+    $stmt = $conn->ms->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_all();
+}
+
 }
