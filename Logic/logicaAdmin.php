@@ -119,7 +119,7 @@
                             <td>$fila[4]</td>
                             <td>$fila[3]</td>
                             <td>$fila[5]</td>
-                            <td><img src='$fila[8]' width='100%'></td>
+                            <td><img src='$fila[8]' width='30%'></td>
                             <td><button class='btn btn-danger' onclick='EliminarPelicula($fila[0]);'>Eliminar</button></td>
                             <td><button class='btn btn-success' onclick='BuscarPelicula($fila[0]);'>Editar</button></td>
                           </tr>";
@@ -152,6 +152,3 @@
                 echo $Pelicula->ActualizarPelicula();
             break;
     }
-    
-
-?>
