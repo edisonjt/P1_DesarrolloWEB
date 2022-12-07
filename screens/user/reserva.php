@@ -3,10 +3,10 @@ session_start();
 if (!isset($_SESSION["email"])) {
     header('Location: ../../signin.php');
     return false;
-} 
-$id=$_SESSION["id"] ;
-$idPelicula=$_GET["idPelicula"];
-$titulo=$_GET["titulo"]
+}
+$id = $_SESSION["id"];
+$idPelicula = $_GET["idPelicula"];
+$titulo = $_GET["titulo"]
 ?>
 <!DOCTYPE html>
 <html lang='en'>
@@ -56,15 +56,15 @@ $titulo=$_GET["titulo"]
 
                         <h4>Reserva</h4>
                     </div>
-                    <form onsubmit="return false;" >
+                    <form onsubmit="return false;">
                         <input type="number" style="display:none" id="idPelicula" value="<?php echo $idPelicula ?>" />
                         <input type="number" style="display:none" id="idUsuario" value="<?php echo $id ?>" />
                         <div class='form-floating mb-3'>
-                            <input type='text' class='form-control' id='titulo' value="<?php echo $titulo ?>" placeholder='#' disabled/>
+                            <input type='text' class='form-control' id='titulo' value="<?php echo $titulo ?>" placeholder='#' disabled />
                             <label for='titulo'>Título Película</label>
                         </div>
                         <div class='form-floating mb-4'>
-                            <input type='date' class='form-control' id='fecha' placeholder='#' value="<?php echo date("Y-m-d");?>"/>
+                            <input type='date' class='form-control' id='fecha' placeholder='#' value="<?php echo date("Y-m-d"); ?>" />
                             <label for='fecha'>Fecha de reserva</label>
                         </div>
                         <div class='form-floating mb-4'>
@@ -72,12 +72,12 @@ $titulo=$_GET["titulo"]
                             <label for='cantidad'>Cantidad de boletos</label>
                         </div>
                         <div class='form-floating mb-4'>
-                            <input type='number' class='form-control' id='total' placeholder='#' disabled/>
+                            <input type='number' class='form-control' id='total' placeholder='#' disabled />
                             <label for='total'>Total</label>
                         </div>
-                        <div id="res">
+                        <!-- <div id="res">
 
-                        </div>
+                        </div> -->
                         <button type='submit' class='btn btn-primary py-3 w-100 mb-4' id="reservar" onclick="GuardarReserva()">
                             Reservar
                         </button>
