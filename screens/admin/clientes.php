@@ -11,7 +11,7 @@ if (!isset($_SESSION["email"])) {
 
 <head>
   <meta charset="utf-8" />
-  <title>DarkPan - Bootstrap 5 Admin Template</title>
+  <title>Panel Administradores</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta content="" name="keywords" />
   <meta content="" name="description" />
@@ -60,11 +60,11 @@ if (!isset($_SESSION["email"])) {
         </a>
         <div class="d-flex align-items-center ms-4 mb-4">
           <div class="position-relative">
-            <img class="rounded-circle" src="../../assets/admin/img/user.jpg" alt="" style="width: 40px; height: 40px" />
+            <img class="rounded-circle" src="../../assets/admin/img/user2.jpg" alt="" style="width: 40px; height: 40px" />
             <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
           </div>
           <div class="ms-3">
-            <h6 class="mb-0">Jhon Doe</h6>
+            <h6 class="mb-0">El Admin</h6>
             <span>Admin</span>
           </div>
         </div>
@@ -73,35 +73,13 @@ if (!isset($_SESSION["email"])) {
           <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Usuarios</a>
             <div class="dropdown-menu bg-transparent border-0">
-              <a href="#" class="dropdown-item active">Clientes</a>
+              <a href="#" class="dropdown-item active" style="margin: bottom 10px;">Clientes</a>
               <a href="admin.php" class="dropdown-item">Administradores</a>
             </div>
           </div>
-          <a href="widget.php" class="nav-item nav-link"><i class="bi bi-tv me-2"></i>Peliculas</a>
-          <a href="widget.php" class="nav-item nav-link"><i class="bi bi-receipt me-2"></i>Ventas</a>
+          <a href="pelicula.php" class="nav-item nav-link"><i class="bi bi-tv me-2"></i>Peliculas</a>
+          <a href="venta.php" class="nav-item nav-link"><i class="bi bi-receipt me-2"></i>Ventas</a>
 
-          <!-- Eliminar esto -->
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
-            <div class="dropdown-menu bg-transparent border-0">
-              <a href="button.php" class="dropdown-item">Buttons</a>
-              <a href="typography.php" class="dropdown-item">Typography</a>
-              <a href="element.php" class="dropdown-item">Other Elements</a>
-            </div>
-          </div>
-          <a href="widget.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
-          <a href="form.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
-          <a href="table.php" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
-          <a href="chart.php" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
-            <div class="dropdown-menu bg-transparent border-0">
-              <a href="signin.php" class="dropdown-item">Sign In</a>
-              <a href="signup.php" class="dropdown-item">Sign Up</a>
-              <a href="404.php" class="dropdown-item">404 Error</a>
-              <a href="blank.php" class="dropdown-item">Blank Page</a>
-            </div>
-          </div>
         </div>
       </nav>
     </div>
@@ -131,7 +109,7 @@ if (!isset($_SESSION["email"])) {
                 <div class="d-flex align-items-center">
                   <img class="rounded-circle" src="../../assets/admin/img/user.jpg" alt="" style="width: 40px; height: 40px" />
                   <div class="ms-2">
-                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <h6 class="fw-normal mb-0">El Admin send you a message</h6>
                     <small>15 minutes ago</small>
                   </div>
                 </div>
@@ -141,7 +119,7 @@ if (!isset($_SESSION["email"])) {
                 <div class="d-flex align-items-center">
                   <img class="rounded-circle" src="../../assets/admin/img/user.jpg" alt="" style="width: 40px; height: 40px" />
                   <div class="ms-2">
-                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <h6 class="fw-normal mb-0">El Admin send you a message</h6>
                     <small>15 minutes ago</small>
                   </div>
                 </div>
@@ -151,7 +129,7 @@ if (!isset($_SESSION["email"])) {
                 <div class="d-flex align-items-center">
                   <img class="rounded-circle" src="../../assets/admin/img/user.jpg" alt="" style="width: 40px; height: 40px" />
                   <div class="ms-2">
-                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                    <h6 class="fw-normal mb-0">El Admin send you a message</h6>
                     <small>15 minutes ago</small>
                   </div>
                 </div>
@@ -186,8 +164,8 @@ if (!isset($_SESSION["email"])) {
           </div>
           <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-              <img class="rounded-circle me-lg-2" src="../../assets/admin/img/user.jpg" alt="" style="width: 40px; height: 40px" />
-              <span class="d-none d-lg-inline-flex">John Doe</span>
+              <img class="rounded-circle me-lg-2" src="../../assets/admin/img/user2.jpg" alt="" style="width: 40px; height: 40px" />
+              <span class="d-none d-lg-inline-flex">El Admin</span>
             </a>
             <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
               <a href="#" class="dropdown-item">My Profile</a>
