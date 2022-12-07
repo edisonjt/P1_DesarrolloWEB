@@ -91,9 +91,24 @@ class Pelicula
         $conn = new DataBase();
         $sql = "insert into venta(id, id_cliente, fecha, num_asientos, total, id_pelicula) values (null,?,?,?,?,?)";
         $stmt = $conn->ms->prepare($sql);
-        $stmt->bind_param("isidi", $this->id_cliente, $this->fecha, $this->num_asientos, $this->total, $this->id_pelicula);
+        $stmt->bind_param(
+            "isidi", 
+            $this->id_cliente, 
+            $this->fecha, 
+            $this->num_asientos, 
+            $this->total, 
+            $this->id_pelicula
+        );
         $stmt->execute();
         $id = $stmt->insert_id;
         return ($id);
     }
+
+    public function EliminarVenta(){
+        $conn = new DataBase();
+        $sql = "delete from venta where id=?";
+        $stmt = $conn->ms->prepare($sql);
+        $stmt->bind_param("i", $this->id);
+        $stmt->execute();
+}
 }
