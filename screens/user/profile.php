@@ -1,13 +1,13 @@
 <?php session_start();
 
-include ("../../Config/Database.php");
+include("../../Config/Database.php");
 require_once("../../Model/UsuariosModel.php");
 require_once("../../Model/VentaModel.php");
-$id=$_SESSION["id"] ;
+$id = $_SESSION["id"];
 $usuario = new Usuario();
 $usuario->setId($id);
-$result= $usuario->BuscarUsuario();
-$result= json_decode($result, true);
+$result = $usuario->BuscarUsuario();
+$result = json_decode($result, true);
 
 $reservas = new Reserva();
 $reservas->setId_cliente($id);
@@ -71,14 +71,7 @@ https://templatemo.com/tm-579-cyborg-gaming
               <img src="../../assets/user/images/logo1.png" alt="">
             </a>
             <!-- ***** Logo End ***** -->
-            <!-- ***** Search End ***** -->
-            <div class="search-input">
-              <form id="search" action="#">
-                <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
-                <i class="fa fa-search"></i>
-              </form>
-            </div>
-            <!-- ***** Search End ***** -->
+
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li><a href="../../index.php">Cartelera</a></li>
@@ -127,7 +120,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                   <div class="col-lg-4 align-self-center">
                     <div class="main-info header-text">
                       <span>Miembro</span>
-                      <h4><?php echo $result[0]["nombre"]. " ".$result[0]["apellido"] ; ?></h4>
+                      <h4><?php echo $result[0]["nombre"] . " " . $result[0]["apellido"]; ?></h4>
                       <p><b>Fecha de nacimiento: </b><?php echo $result[0]["fecha_nac"]; ?></p>
                       <p><b>E-mail: </b><?php echo $result[0]["email"]; ?></p>
                       <p><b>Teléfono: </b> <?php echo $result[0]["telefono"]; ?></p>
@@ -139,7 +132,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                   <div class="col-lg-4 align-self-center">
                     <ul>
                       <li>Peliculas reservadas <span> <?php echo count($cantReservas) ?></span></li>
-                     
+
 
                     </ul>
                   </div>

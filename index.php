@@ -56,12 +56,7 @@ https://templatemo.com/tm-579-cyborg-gaming
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Search End ***** -->
-            <div class="search-input">
-              <form id="search" action="#">
-                <input type="text" placeholder="Type Something" id="searchText" name="searchKeyword" onkeypress="handle" />
-                <i class="fa fa-search"></i>
-              </form>
-            </div>
+
             <!-- ***** Search End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
@@ -105,12 +100,12 @@ https://templatemo.com/tm-579-cyborg-gaming
                   <h6>BIENVENIDOS A CINE23</h6>
                   <h4>El mejor cine del mundo</h4>
                   <div class="main-button">
-                  <?php
-              if (!isset($_SESSION["email"])) {
-                echo " <a href='signin.php'>Iniciar Sesión</a>";
-              } 
-              ?>
-                   
+                    <?php
+                    if (!isset($_SESSION["email"])) {
+                      echo " <a href='signin.php'>Iniciar Sesión</a>";
+                    }
+                    ?>
+
                   </div>
                 </div>
               </div>
@@ -126,8 +121,8 @@ https://templatemo.com/tm-579-cyborg-gaming
                   <h4><em>Cartelera</em> de películas</h4>
                 </div>
                 <div class="row" id="datos">
-                 
-                  
+
+
                 </div>
               </div>
             </div>
