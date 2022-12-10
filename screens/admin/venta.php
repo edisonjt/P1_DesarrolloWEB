@@ -11,7 +11,7 @@ if (!isset($_SESSION["email"])) {
 
 <head>
   <meta charset="utf-8" />
-  <title>Panel Administradores</title>
+  <title>CINE23 - Panel Administradores</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta content="" name="keywords" />
   <meta content="" name="description" />
@@ -119,7 +119,7 @@ if (!isset($_SESSION["email"])) {
       <div class="container-fluid pt-4 px-4">
         <div class="bg-secondary text-center rounded p-4">
           <div class="d-flex align-items-center justify-content-between mb-4">
-            <h6 class="mb-0">Tabla Ventas</h6>
+            <h6 class="mb-0">Ventas</h6>
             <a href="">Show All</a>
           </div>
           <div class="table-responsive">
